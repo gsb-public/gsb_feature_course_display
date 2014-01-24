@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GSB Feature Course Display feature.
+ */
+
+include_once 'gsb_feature_course_display.features.inc';
