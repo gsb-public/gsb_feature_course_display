@@ -180,7 +180,7 @@ function gsb_feature_course_display_views_default_views() {
   $handler->display->display_options['sorts']['field_course_code_value']['id'] = 'field_course_code_value';
   $handler->display->display_options['sorts']['field_course_code_value']['table'] = 'field_data_field_course_code';
   $handler->display->display_options['sorts']['field_course_code_value']['field'] = 'field_course_code_value';
-  /* Contextual filter: Content: Faculty Advisors (field_person_fac_ref) */
+  /* Contextual filter: Content: Instructors (field_person_fac_ref) */
   $handler->display->display_options['arguments']['field_person_fac_ref_target_id']['id'] = 'field_person_fac_ref_target_id';
   $handler->display->display_options['arguments']['field_person_fac_ref_target_id']['table'] = 'field_data_field_person_fac_ref';
   $handler->display->display_options['arguments']['field_person_fac_ref_target_id']['field'] = 'field_person_fac_ref_target_id';
@@ -210,6 +210,7 @@ function gsb_feature_course_display_views_default_views() {
   $handler->display->display_options['bundles'] = array(
     0 => 'faculty',
   );
+  $handler->display->display_options['show_title'] = 1;
   $export['gsb_course_listing'] = $view;
 
   return $export;
