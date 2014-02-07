@@ -180,7 +180,7 @@ function gsb_feature_course_display_views_default_views() {
   $handler->display->display_options['sorts']['field_course_code_value']['id'] = 'field_course_code_value';
   $handler->display->display_options['sorts']['field_course_code_value']['table'] = 'field_data_field_course_code';
   $handler->display->display_options['sorts']['field_course_code_value']['field'] = 'field_course_code_value';
-  /* Contextual filter: Content: Instructors (field_person_fac_ref) */
+  /* Contextual filter: Content: Faculty Advisors (field_person_fac_ref) */
   $handler->display->display_options['arguments']['field_person_fac_ref_target_id']['id'] = 'field_person_fac_ref_target_id';
   $handler->display->display_options['arguments']['field_person_fac_ref_target_id']['table'] = 'field_data_field_person_fac_ref';
   $handler->display->display_options['arguments']['field_person_fac_ref_target_id']['field'] = 'field_person_fac_ref_target_id';
@@ -203,6 +203,14 @@ function gsb_feature_course_display_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'course' => 'course',
   );
+  /* Filter criterion: Content: Starting Academic Year (field_course_start_acad_year) */
+  $handler->display->display_options['filters']['field_course_start_acad_year_value']['id'] = 'field_course_start_acad_year_value';
+  $handler->display->display_options['filters']['field_course_start_acad_year_value']['table'] = 'field_data_field_course_start_acad_year';
+  $handler->display->display_options['filters']['field_course_start_acad_year_value']['field'] = 'field_course_start_acad_year_value';
+  $handler->display->display_options['filters']['field_course_start_acad_year_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_course_start_acad_year_value']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_course_start_acad_year_value']['default_date'] = 'now -5 year';
+  $handler->display->display_options['filters']['field_course_start_acad_year_value']['year_range'] = '-4:+1';
 
   /* Display: EVA Field */
   $handler = $view->new_display('entity_view', 'EVA Field', 'entity_view_1');
