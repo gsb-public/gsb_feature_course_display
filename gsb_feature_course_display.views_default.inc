@@ -150,6 +150,7 @@ function gsb_feature_course_display_views_default_views() {
   $handler->display->display_options['fields']['title_1']['alter']['text'] = '[field_course_subject] [field_course_code]: [title_1] ';
   $handler->display->display_options['fields']['title_1']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title_1']['alter']['path'] = 'http://explorecourses.stanford.edu/search?q=[field_course_subject]+[field_course_code]&academicYear=[field_course_start_acad_year][field_course_end_acad_year]';
+  $handler->display->display_options['fields']['title_1']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
   /* Field: Field: Description */
